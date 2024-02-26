@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="//cdn.web-fonts.ge/fonts/bpg-le-studio-02/css/bpg-le-studio-02.min.css">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/filter.css">
     <title>EasyDine | Search</title>
 </head>
 
@@ -34,173 +35,174 @@
             </div>
             <button class="filterButton popup" onclick="myFunction()">ფილტრი
                 <div class="popupText" id="myPopup">
-                    <fieldset class="sittingSpace">
-                        <label class="sittingList" for="checkbox"><svg xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 256 256">
-                                <rect fill="none" />
-                                <rect x="64" y="32" width="128" height="40" rx="8" fill="none" stroke="currentColor"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
-                                <line x1="168" y1="72" x2="192" y2="224" fill="none" stroke="currentColor"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
-                                <line x1="64" y1="224" x2="88" y2="72" fill="none" stroke="currentColor"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
-                                <line x1="72.84" y1="168" x2="183.16" y2="168" fill="none" stroke="currentColor"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
-                            </svg>დასასხდომი სივრცე</label>
-                        <label> <input id="checkbox" type="checkbox" name="checkbox" value="ბარი" checked
-                                class="inline" />ბარი</label>
-                        <label><input id="checkbox" type="checkbox" name="checkbox" value="სტანდარტული" class="inline">
-                            სტანდარტული</label>
-                        <label> <input id="checkbox" type="checkbox" name="checkbox" value="ტერასა" class="inline">
-                            ტერასა</label>
-                        <label> <input id="checkbox" type="checkbox" name="checkbox" value="გარე სივრცე" class="inline">
-                            გარე სივრცე</label>
-                    </fieldset>
-                    <div class="priceList">
-                        <label for="price" class="priceTitle"><svg xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 256 256">
-                                <rect width="256" height="256" fill="none" />
-                                <circle cx="128" cy="128" r="32" fill="none" stroke="currentColor"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
-                                <rect x="16" y="64" width="224" height="128" fill="none" stroke="currentColor"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
-                                <path d="M240,104a48.85,48.85,0,0,1-40-40" fill="none" stroke="currentColor"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
-                                <path d="M200,192a48.85,48.85,0,0,1,40-40" fill="none" stroke="currentColor"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
-                                <path d="M16,152a48.85,48.85,0,0,1,40,40" fill="none" stroke="currentColor"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
-                                <path d="M56,64a48.85,48.85,0,0,1-40,40" fill="none" stroke="currentColor"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
-                            </svg>ფასი</label>
-                        <div class="priceRec">
-                            <div class="two dollars">$$</div>
-                            <div class="priceLine"></div>
-                            <div class="three dollars">$$$</div>
-                            <div class="priceLine"></div>
-                            <div class="four dollars">$$$$</div>
+                    <div class="filterPopup">
+                        <fieldset class="sittingField">
+                            <label class="sittingList" for="checkbox"><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 256 256">
+                                    <rect fill="none" />
+                                    <rect x="64" y="32" width="128" height="40" rx="8" fill="none" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+                                    <line x1="168" y1="72" x2="192" y2="224" fill="none" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+                                    <line x1="64" y1="224" x2="88" y2="72" fill="none" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+                                    <line x1="72.84" y1="168" x2="183.16" y2="168" fill="none" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+                                </svg>დასასხდომი სივრცე</label>
+                            <label> <input id="checkbox" type="checkbox" name="checkbox" value="ბარი" checked
+                                    class="inline" />ბარი</label>
+                            <label><input id="checkbox" type="checkbox" name="checkbox" value="სტანდარტული"
+                                    class="inline">
+                                სტანდარტული</label>
+                            <label> <input id="checkbox" type="checkbox" name="checkbox" value="ტერასა" class="inline">
+                                ტერასა</label>
+                            <label> <input id="checkbox" type="checkbox" name="checkbox" value="გარე სივრცე"
+                                    class="inline">
+                                გარე სივრცე</label>
+                        </fieldset>
+                        <div class="priceField">
+                            <label for="price" class="priceTitle"><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 256 256">
+                                    <rect width="256" height="256" fill="none" />
+                                    <circle cx="128" cy="128" r="32" fill="none" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+                                    <rect x="16" y="64" width="224" height="128" fill="none" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+                                    <path d="M240,104a48.85,48.85,0,0,1-40-40" fill="none" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+                                    <path d="M200,192a48.85,48.85,0,0,1,40-40" fill="none" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+                                    <path d="M16,152a48.85,48.85,0,0,1,40,40" fill="none" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+                                    <path d="M56,64a48.85,48.85,0,0,1-40,40" fill="none" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+                                </svg>ფასი</label>
+                            <div class="priceRec">
+                                <div class="two dollars">$$</div>
+                                <div class="priceLine"></div>
+                                <div class="three dollars">$$$</div>
+                                <div class="priceLine"></div>
+                                <div class="four dollars">$$$$</div>
+                            </div>
                         </div>
-                    </div>
-                    <fieldset class="locationField">
-                        <label class="locationList" for="checkbox"><svg xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 256 256">
-                                <rect width="256" height="256" fill="none" />
-                                <line x1="56" y1="232" x2="200" y2="232" stroke="currentColor" stroke-linecap="round"
-                                    stroke-linejoin="round" stroke-width="16" />
-                                <circle cx="128" cy="104" r="32" fill="none" stroke="currentColor"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
-                                <path d="M208,104c0,72-80,128-80,128S48,176,48,104a80,80,0,0,1,160,0Z" fill="none"
-                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="16" />
-                            </svg>მდებარეობა</label>
-                        <label> <input id="checkbox" type="checkbox" name="checkbox" value="ისანი-სამგორი
+                        <fieldset class="locationField">
+                            <label class="locationList" for="checkbox"><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 256 256">
+                                    <rect width="256" height="256" fill="none" />
+                                    <line x1="56" y1="232" x2="200" y2="232" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+                                    <circle cx="128" cy="104" r="32" fill="none" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+                                    <path d="M208,104c0,72-80,128-80,128S48,176,48,104a80,80,0,0,1,160,0Z" fill="none"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="16" />
+                                </svg>მდებარეობა</label>
+                            <label> <input id="checkbox" type="checkbox" name="checkbox" value="ისანი-სამგორი
                             " checked class="inline" />ისანი-სამგორი
-                        </label>
-                        <label><input id="checkbox" type="checkbox" name="checkbox" value="ძველი თბილისი
+                            </label>
+                            <label><input id="checkbox" type="checkbox" name="checkbox" value="ძველი თბილისი
                             " class="inline">
-                            ძველი თბილისი
-                        </label>
-                        <label> <input id="checkbox" type="checkbox" name="checkbox" value="ვაკე-საბურთალო
+                                ძველი თბილისი
+                            </label>
+                            <label> <input id="checkbox" type="checkbox" name="checkbox" value="ვაკე-საბურთალო
                             " class="inline">
-                            ვაკე-საბურთალო
-                        </label>
-                        <label> <input id="checkbox" type="checkbox" name="checkbox" value="დიდუბე-ჩუღურეთი
+                                ვაკე-საბურთალო
+                            </label>
+                            <label> <input id="checkbox" type="checkbox" name="checkbox" value="დიდუბე-ჩუღურეთი
                             " class="inline">
-                            დიდუბე-ჩუღურეთი
-                        </label>
-                        <div class="more">
-                            <i class="ri-add-line"></i>
-                            <a href="">მეტი</a>
-                        </div>
-                    </fieldset>
-                    <fieldset class="cuisineField">
-                        <label class="cuisineList" for="checkbox"><svg xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 256 256">
-                                <rect width="256" height="256" fill="none" />
-                                <line x1="80" y1="40" x2="80" y2="88" fill="none" stroke="currentColor"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
-                                <line x1="80" y1="128" x2="80" y2="224" fill="none" stroke="currentColor"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
-                                <path d="M208,168H152s0-104,56-128V224" fill="none" stroke="currentColor"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
-                                <path d="M48,40,40,88a40,40,0,0,0,80,0l-8-48" fill="none" stroke="currentColor"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
-                            </svg>სამზარეულო</label>
-                        <label> <input id="checkbox" type="checkbox" name="checkbox" value="ქართული
+                                დიდუბე-ჩუღურეთი
+                            </label>
+                            <div class="more">
+                                <i class="ri-add-line"></i>
+                                <a href="">მეტი</a>
+                            </div>
+                        </fieldset>
+                        <fieldset class="cuisineField">
+                            <label class="cuisineList" for="checkbox"><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 256 256">
+                                    <rect width="256" height="256" fill="none" />
+                                    <line x1="80" y1="40" x2="80" y2="88" fill="none" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+                                    <line x1="80" y1="128" x2="80" y2="224" fill="none" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+                                    <path d="M208,168H152s0-104,56-128V224" fill="none" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+                                    <path d="M48,40,40,88a40,40,0,0,0,80,0l-8-48" fill="none" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+                                </svg>სამზარეულო</label>
+                            <label> <input id="checkbox" type="checkbox" name="checkbox" value="ქართული
                             " checked class="inline" />ქართული
-                        </label>
-                        <label><input id="checkbox" type="checkbox" name="checkbox" value="ამერიკული
+                            </label>
+                            <label><input id="checkbox" type="checkbox" name="checkbox" value="ამერიკული
                             " class="inline">
-                            ამერიკული
-                        </label>
-                        <label> <input id="checkbox" type="checkbox" name="checkbox" value="აზიური
+                                ამერიკული
+                            </label>
+                            <label> <input id="checkbox" type="checkbox" name="checkbox" value="აზიური
                             " class="inline">
-                            აზიური
-                        </label>
-                        <label> <input id="checkbox" type="checkbox" name="checkbox" value="იტალიური
+                                აზიური
+                            </label>
+                            <label> <input id="checkbox" type="checkbox" name="checkbox" value="იტალიური
                             " class="inline">
-                            იტალიური
-                        </label>
-                        <div class="more">
-                            <i class="ri-add-line"></i>
-                            <a href="">მეტი</a>
-                        </div>
-                    </fieldset>
-                    <fieldset class="reviewField">
-                        <label class="reviewList" for="checkbox"><svg xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 256 256">
-                                <rect width="256" height="256" fill="none" />
-                                <line x1="96" y1="224" x2="160" y2="224" fill="none" stroke="currentColor"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
-                                <line x1="128" y1="184" x2="128" y2="224" fill="none" stroke="currentColor"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
-                                <path d="M58,128H48A32,32,0,0,1,16,96V80a8,8,0,0,1,8-8H56" fill="none"
-                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="16" />
-                                <path d="M198,128h10a32,32,0,0,0,32-32V80a8,8,0,0,0-8-8H200" fill="none"
-                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="16" />
-                                <path
-                                    d="M64,48H192a8,8,0,0,1,8,8v55.1c0,39.7-31.75,72.6-71.45,72.9A72,72,0,0,1,56,112V56A8,8,0,0,1,64,48Z"
-                                    fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="16" />
-                            </svg>შეფასება</label>
-                        <label> <input id="checkbox" type="checkbox" name="checkbox" value="two stars
+                                იტალიური
+                            </label>
+                            <div class="more">
+                                <i class="ri-add-line"></i>
+                                <a href="">მეტი</a>
+                            </div>
+                        </fieldset>
+                        <fieldset class="reviewField">
+                            <label class="reviewList" for="checkbox"><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 256 256">
+                                    <rect width="256" height="256" fill="none" />
+                                    <line x1="96" y1="224" x2="160" y2="224" fill="none" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+                                    <line x1="128" y1="184" x2="128" y2="224" fill="none" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+                                    <path d="M58,128H48A32,32,0,0,1,16,96V80a8,8,0,0,1,8-8H56" fill="none"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="16" />
+                                    <path d="M198,128h10a32,32,0,0,0,32-32V80a8,8,0,0,0-8-8H200" fill="none"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="16" />
+                                    <path
+                                        d="M64,48H192a8,8,0,0,1,8,8v55.1c0,39.7-31.75,72.6-71.45,72.9A72,72,0,0,1,56,112V56A8,8,0,0,1,64,48Z"
+                                        fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="16" />
+                                </svg>შეფასება</label>
+                            <label> <input id="checkbox" type="checkbox" name="checkbox" value="two stars
                             " checked class="inline" />&#9733;&#9733;
-                        </label>
-                        <label><input id="checkbox" type="checkbox" name="checkbox" value="three stars
+                            </label>
+                            <label><input id="checkbox" type="checkbox" name="checkbox" value="three stars
                             " class="inline">
-                            &#9733;&#9733;&#9733;
-                        </label>
-                        <label> <input id="checkbox" type="checkbox" name="checkbox" value="four stars
+                                &#9733;&#9733;&#9733;
+                            </label>
+                            <label> <input id="checkbox" type="checkbox" name="checkbox" value="four stars
                             " class="inline">
-                            &#9733;&#9733;&#9733;&#9733;
-                        </label>
-                        <label> <input id="checkbox" type="checkbox" name="checkbox" value="five stars
+                                &#9733;&#9733;&#9733;&#9733;
+                            </label>
+                            <label> <input id="checkbox" type="checkbox" name="checkbox" value="five stars
                             " class="inline">
-                            &#9733;&#9733;&#9733;&#9733;&#9733;
-                        </label>
-                    </fieldset>
-                    <fieldset class="hoursField">
-                        <label class="hoursList" for="checkbox"><svg xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 256 256">
-                                <rect width="256" height="256" fill="none" />
-                                <circle cx="128" cy="128" r="96" fill="none" stroke="currentColor"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
-                                <polyline points="128 72 128 128 184 128" fill="none" stroke="currentColor"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
-                            </svg>სამუშაო საათები</label>
-                        <label> <input id="checkbox" type="checkbox" name="checkbox" value="ახლა ღიაა
+                                &#9733;&#9733;&#9733;&#9733;&#9733;
+                            </label>
+                        </fieldset>
+                        <fieldset class="hoursField">
+                            <label class="hoursList" for="checkbox"><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 256 256">
+                                    <rect width="256" height="256" fill="none" />
+                                    <circle cx="128" cy="128" r="96" fill="none" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+                                    <polyline points="128 72 128 128 184 128" fill="none" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+                                </svg>სამუშაო საათები</label>
+                            <label> <input id="checkbox" type="checkbox" name="checkbox" value="ახლა ღიაა
                             " checked class="inline" />ახლა ღიაა
-                        </label>
-                        <label><input id="checkbox" type="checkbox" name="checkbox" value="24/7
+                            </label>
+                            <label><input id="checkbox" type="checkbox" name="checkbox" value="24/7
                             " class="inline">
-                            24/7
-                        </label>
-                    </fieldset>
-
-
-
+                                24/7
+                            </label>
+                        </fieldset>
+                    </div>
                 </div>
             </button>
         </div>
@@ -345,18 +347,10 @@
                     <span class="address">მარჯანიშვილის ქ. 5</span>
                 </div>
             </div>
-
-
         </div>
     </main>
 
 </body>
-<script>
-    // When the user clicks on <div>, open the popup
-    function myFunction() {
-        var popup = document.getElementById("myPopup");
-        popup.classList.toggle("show");
-    }
-</script>
+<script src="filterButton.js"></script>
 
 </html>
