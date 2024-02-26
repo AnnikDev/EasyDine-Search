@@ -1,4 +1,402 @@
-body {
-    /* background-color: #2f372d; */
+* {
+
     font-family: 'BPG LE Studio 02', sans-serif;
+}
+
+body {
+    background-color: #2f372d;
+}
+
+.ri-search-line {
+    font-size: 18px;
+    color: #f1c376;
+    z-index: 5;
+}
+
+.searchField {
+    width: 240px;
+    height: 27px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px auto;
+}
+
+.searchText {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.searchText input {
+    width: 250px;
+    height: 27px;
+    flex-grow: 0;
+    padding-left: 35px;
+    border-radius: 55px;
+    border: solid 1px rgba(241, 195, 118, 0.97);
+    background-color: #2f372d;
+    font-size: 8px;
+    margin: auto -30px;
+}
+
+.ri-equalizer-2-line {
+    font-size: 18px;
+    color: #f1c376;
+}
+
+.filterSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 320px;
+    border-bottom: solid 1px #606c5d;
+    margin: 30px auto;
+    padding: 5px;
+}
+
+.filterComponents {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: #f1c376;
+    margin-left: 13px;
+    width: 150px;
+}
+
+.sittingFilterComponent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 10px;
+}
+
+.ri-close-line {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.ri-close-line:hover {
+    color: #606c5d;
+}
+
+.priceFilterComponent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 10px;
+}
+
+.filterButton {
+    width: 72px;
+    height: 25px;
+    border-radius: 6px;
+    border: solid 1px #f1c376;
+    font-size: 11px;
+    color: #f1c376;
+    background: none;
+    margin-right: 13px;
+    cursor: pointer;
+}
+
+.filterButton:hover {
+    background-color: #f1c376;
+    color: #2f372d;
+}
+
+.restaurantsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 320px;
+    gap: 10px;
+    margin: 0 auto 50px;
+}
+
+.item {
+    width: 130px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: auto;
+}
+
+.itemImg {
+    width: 130px;
+    height: 70px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.restaurantName {
+    font-size: 11px;
+    color: #f7e6c4;
+    cursor: pointer;
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    align-items: start;
+}
+
+.star {
+    font-size: 13px;
+    color: #ffa629;
+    margin: 0 5px 0 0;
+}
+
+.revNum {
+    padding-right: 3px;
+}
+
+.review p {
+    font-size: 6px;
+    color: rgba(247, 230, 196, 0.5);
+}
+
+.location {
+    font-size: 6px;
+    color: #f7e6c4;
+}
+
+
+
+
+
+
+/* 
+.sittingSpace {
+    display: flex;
+    flex-direction: row;
+}
+
+.sittingList {
+    color: #f1c376;
+    text-align: left;
+}
+
+.sittingList svg{
+    width: 28px;
+}
+
+.sittingList li{
+    color: #f7e6c4;
+    font-size: 12px;
+}
+
+.sittingList input{
+    width: 20px;
+    height: 20px;
+} */
+
+.sittingSpace{
+    width: 280px;
+}
+
+fieldset label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 13px;
+    color: #f7e6c4;
+    gap: 6px;
+}
+
+.sittingList {
+    color: #f1c376;
+    margin-bottom: 10px;
+}
+
+.sittingList svg {
+    width: 28px;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    appearance: none;
+    background: none;
+    border: solid 1px #f1c376;
+    border-radius: 5px;
+}
+
+.priceList {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+}
+
+.priceTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #f1c376;
+    gap: 5px;
+    font-size: 13px;
+}
+
+.priceTitle svg {
+    width: 28px;
+    height: 28px;
+}
+
+.priceRec {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 280px;
+}
+
+.dollars {
+    font-size: 16px;
+    border: solid 1px #f1c376;
+    height: 40px;
+    width: 95px;
+    color: #f7e6c4;
+    padding-top: 12px;
+    box-sizing: border-box;
+}
+
+.locationField{
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+}
+
+.locationList {
+    color: #f1c376;
+    margin-bottom: 10px;
+}
+
+.locationList svg {
+    width: 28px;
+}
+
+.more{
+    margin-top: 10px;
+    text-align: start;
+}
+.more a{
+    font-size: 10px;
+    color: #f1c376;
+    
+    cursor: pointer;
+}
+
+.ri-add-line{
+    color: #f1c376;
+}
+
+
+.cuisineField{
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+}
+
+.cuisineList {
+    color: #f1c376;
+    margin-bottom: 10px;
+}
+
+.cuisineList svg {
+    width: 28px;
+}
+
+.reviewField{
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+}
+
+.reviewList {
+    color: #f1c376;
+    margin-bottom: 10px;
+}
+
+.reviewList svg {
+    width: 28px;
+}
+
+.hoursField{
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+}
+
+.hoursList {
+    color: #f1c376;
+    margin-bottom: 10px;
+}
+
+.hoursList svg {
+    width: 28px;
+}
+
+
+
+
+
+
+/* Popup container */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.popupText {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+}
+
+/* The actual popup (appears on top) */
+.popup .popupText {
+    visibility: hidden;
+    width: 300px;
+    height: 1000px;
+    background-color: #606c5d;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    top: 30px;
+    right: -4px;
+}
+
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
